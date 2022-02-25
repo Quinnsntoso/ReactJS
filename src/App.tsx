@@ -5,7 +5,7 @@ import './App.css';
 export interface MyState {
     name: string;
     class: string;
-    isAvailable: boolean;
+    isAvailable: string;
     counter: number;
 }
 
@@ -16,7 +16,7 @@ export class Component extends React.Component <any, MyState>  {
         this.state = {
             name: 'Quinn Santoso',
             class: 'XI IPS 3',
-            isAvailable: true,
+            isAvailable: 'true',
             counter: 1,
         };
     }
@@ -31,7 +31,7 @@ export class Component extends React.Component <any, MyState>  {
     render() {
         if (this.state.counter % 3) {
         return (
-            <div>
+            <div style={{textAlign: "center"}}>
                 <h1>Nama : {this.state.name}</h1> 
                 <p>Kelas : {this.state.class}</p>
                 <p>Pagi : {this.state.isAvailable}</p>
@@ -55,7 +55,7 @@ export class Component extends React.Component <any, MyState>  {
                        <button type="button" onClick={this.handleClick}>
                        click me
                        </button>
-                       <img src="https://i.pinimg.com/736x/95/53/ca/9553ca5c8f1795c5f3909a9c257c9711.jpg"></img>
+                       <img src="https://i.pinimg.com/564x/8b/09/f5/8b09f5ca872dacbd3c1f5faea7f330d0.jpg"></img>
                   </div>
             )
         }
