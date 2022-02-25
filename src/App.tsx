@@ -6,7 +6,7 @@ export interface MyState {
     name: string;
     class: string;
     isAvailable: boolean;
-    Counter: number;
+    counter: number;
 }
 
 export class Component extends React.Component <any, MyState>  {
@@ -14,8 +14,8 @@ export class Component extends React.Component <any, MyState>  {
         super(props);
 
         this.state = {
-            nama: 'Quinn Santoso',
-            kelas: 'XI IPS 3',
+            name: 'Quinn Santoso',
+            class: 'XI IPS 3',
             isAvailable: true,
             counter: 1,
         };
@@ -29,7 +29,7 @@ export class Component extends React.Component <any, MyState>  {
     }
 
     render() {
-        if (this.state.numButton % 3) {
+        if (this.state.counter % 3) {
         return (
             <div>
                 <h1>Nama : {this.state.name}</h1> 
@@ -50,7 +50,7 @@ export class Component extends React.Component <any, MyState>  {
                        <p>Kelas : {this.state.class}</p>
                        <p>Pagi : {this.state.isAvailable}</p>
  
-                       <h1>{this.state.numButton}</h1>
+                       <h1>{this.state.counter}</h1>
                
                        <button type="button" onClick={this.handleClick}>
                        click me
